@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+ *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            width:100%;
+            height:100vh;
+            overflow:hidden;
+            position:relative;
+            background: url("https://wallpapercave.com/wp/wp4892256.jpg") center center / cover no-repeat;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .background{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background-image:url("https://wall.alphacoders.com/big.php?i=1358145.jpg"); /* Change image name if needed */
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            filter:blur(6px);
+            transform:scale(1.1);
+            z-index:-2;
+        }
+        .overlay{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.15);
+            z-index:-1;
+        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    max-width:1750px;
+    height:85vh;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:40px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    overflow:auto;
+}
+body{
+    min-height:100vh;
+}
+header{
+    width:100%;
+    height:90px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+}
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+.search-box{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    margin-right: 10px;
+}
+.search-box input{
+    width:350px;
+    height: 45px;
+    padding:14px 20px;
+    border:none;
+    outline:none;
+    border-radius:30px;
+    background:rgba(255,255,255,.15);
+    color:white;
+    font-size:16px;
+    backdrop-filter:blur(15px);
+}
+.search-box input::placeholder{
+    color:#ddd;
+}
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.icon{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    cursor:pointer;
+    font-size:20px;
+}
+.profile{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid white;
+}
+.sidebar{
+    position: fixed;      /* Fixed while scrolling */
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 1000;
+}
+
+.sidebar a{
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active{
+    background: #FFD000;
+    color: black;
+    transform: scale(1.1);
+}
+.content{
+    display: flex;
+    height: calc(100% - 90px);
+}
+.menu{
+    width:55px;
+    height:55px;
+    border-radius:18px;
+    background:rgba(255,255,255,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    backdrop-filter:blur(15px);
+}
+.menu:hover{
+    transform:scale(1.1);
+    background:rgba(255,255,255,.25);
+}
+.active{
+    background:#FFD400;
+    color:black;
+    font-weight:bold;
+}
+.hero{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+.hero-text{
+    width:45%;
+    color:white;
+}
+.project-text{
+    width: 100%;
+    color: white;
+}
+.project-text h1{
+    font-size:70px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-align: center;
+}
+.project-text h3{
+    background-color: #f4f4f4; /* Sets the box color */
+            padding: 20px;            /* Adds space around the text */
+            border: 1px solid #ccc;    /* Optional: Adds a border border */
+            border-radius: 8px;        /* Optional: Rounds the corners */
+            width: 300px;
+            color: black;
+}
+.hero-text h1{
+    font-size:70px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+.hero-text h2{
+    font-size:55px;
+    color:#FFD400;
+    margin-bottom:20px;
+}
+.hero-text p{
+    font-size:18px;
+    line-height:30px;
+    color:#ddd;
+    margin-bottom:30px;
+}
+.hero-text button{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:#FFD400;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+.hero-text button:hover{
+    transform:scale(1.05);
+}
+.hero-image{
+    width:100%;
+    display:flex;
+    justify-content: right;
+    align-items:bottom;
+}
+.hero-image img{
+    width:100%;
+    max-width:800px;
+    object-fit:contain;
+}
+.minimal-box {
+            background-color: #ffffff; /* Clean white background */
+            border: 1px solid #e0e0e0;   /* Ultra-thin, light gray border */
+            border-radius: 6px;        /* Soft, subtle corner rounding */
+            padding: 24px;             /* Generous breathing room for text */
+            max-width: 400px;          /* Prevents the box from stretching too wide */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Almost invisible soft shadow */
+        }
+
+        /* Text styling inside the box */
+        .minimal-box h2 {
+            margin-top: 0;
+            color: #1a1a1a;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .minimal-box p {
+            margin-bottom: 0;
+            color: #666666;             /* Muted gray text for a softer look */
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#111827;
+    color:white;
+    position:sticky;
+    top:0;
+}
+nav h2{
+    color:#38bdf8;
+}
+nav ul{
+    display:flex;
+    list-style:none;
+}
+nav ul li{
+    margin-left:20px;
+}
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+nav ul li a:hover{
+    color:#38bdf8;
+}
+html{
+    scroll-behavior: smooth;
+}
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Keeps the header layered above other content */
+}
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    
+}
+.skill{
+    margin-left: 10px;
+    margin-right: 10px;
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+</style>
+</head>
+<body><header class="sticky-header">
+    <div class="logo">
+        PRASHANT KUMAR
+    </div><div class="content">
+<div class="sidebar">
+    <a href="#home" class="active"><i class="fas fa-home"></i></a>
+    <a href="#about"><i class="fas fa-user"></i></a>
+    <a href="#skills"><i class="fas fa-code"></i></a>
+    <a href="#projects"><i class="fas fa-briefcase"></i></a>
+    <a href="#contact"><i class="fas fa-envelope"></i></a>
+</div>
+    <div class="search-box nav-right">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="nav-right">
+        <div class="icon">🔔</div>
+        <img src="https://i.pravatar.cc/100" class="profile">
+    </div>
+    </header>
+     <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="container">
+    
+<!--        <div class="hero-text" id="home">
+
+        <h1>Hii, I'm PRASHANT </h1>
+        <h2>KUMAR</h2>
+        <h3>Web Developer | App Developer | Data Analyst | Data Scientist</h3>
+<p>
+I build responsive websites, modern web applications,
+and data-driven solutions using HTML, CSS, JavaScript,
+React, Python, SQL and Power BI.
+</p>
+        <button ><a href="C:\Users\Puneet\Downloads\autoCV.pdf" >Download Resume</button></a>
+    </div>
+    <div class="hero">
+    <div class="hero-image">
+        <img src="c:\Users\Puneet\Downloads\971dc758-e92e-47a4-80f3-8ddbf4cd8fa2.png" alt="Anime Character">
+    </div></div>
+-->
+<section id="home">
+    <div class="content">
+    <div class="hero-text" id="home">
+<h2>Portfolio</h2>
+        <h1>Hii, I'm PRASHANT </h1>
+        <h2>KUMAR</h2>
+        <h3>Web Developer | App Developer | Data Analyst | Data Scientist</h3>
+<p>
+I build responsive websites, modern web applications,
+and data-driven solutions using HTML, CSS, JavaScript,
+React, Python, SQL and Power BI.
+</p>
+        <button ><a href="C:\Users\Puneet\Downloads\autoCV.pdf" >Download Resume</button></a>
+    </div>
+    <div class="hero">
+    <div class="hero-image">
+        <img src="imageswebsite/profilepng.png" alt="Anime Character">
+    </div></div></div>
+</section>
+
+<section id="about">
+    <div class="content">
+    <div id="about" class="project-text">
+    <h1>About</h1>
+<p align="center">
+I build responsive websites, modern web applications,<br>
+and data-driven solutions using HTML, CSS, JavaScript,<br>
+React, Python, SQL and Power BI.<br><br>
+</p>
+<p align="center">
+    I looking for an opportunity with a reputed company in which I can use my skills and find growth in<br>
+future. Aim to be associated with a prograssive organization with offers an excellent atmosphere to prove<br>
+myself by utilizing all technical knowledge into practice and profit myself with experience and valuable<br>
+knowledge for the development and growth of the organization.
+</p></div></div>
+</section>
+
+<section id="skills">
+<div class="content">
+<div id="skills" class="project-text">
+<h1>Skills</h1>
+
+<div class="skills-container">
+
+<div class="skill">
+    <img src="imageswebsite/claudeskill.jpg" width="100" height="100">
+</div>
+<div class="skill">
+    <img src="imageswebsite/vscodeskill.jpg" width="100" height="100">
+</div>
+<div class="skill">
+    <img src="imageswebsite/cppskill.jpg" width="100" height="100">
+</div>
+<div class="skill">
+    <img src="imageswebsite/cskill.png" width="100" height="100">
+</div>
+<div class="skill">
+    <img src="imageswebsite/cssskill.jpg"width="100" height="100">
+</div>
+
+<div class="skill">
+    <img src="imageswebsite/figmaskill.jpg" width="100" height="100">
+</div>
+
+<div class="skill">
+    <img src="imageswebsite/githubskill.jpg" width="100" height="100">
+</div>
+
+<div class="skill">
+    <img src="imageswebsite/htmlskill.png" width="100" height="100">
+</div>
+
+<div class="skill">
+    <img src="imageswebsite/javascriptskill.jpg" width="100" height="100">
+</div>
+<div class="skill">
+    <img src="imageswebsite/mysqlskill.jpg" width="100" height="100">
+</div>
+
+</div>
+</div></div>
+</section>
+
+<section id="projects">
+    <div class="content">
+    <div id="projects" class="project-text">
+    <h1>Projects</h1>
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+    <img src="imageswebsite/project001.jpg" width="300" height="150">
+
+</div></div>
+</section>
+
+<section id="contact">
+    <div class="content">
+    <div id="contact" class="project-text">
+    <h1>Contact</h1>
+<div class="column"><h3>Prashant Kumar</h3></div>
+<div class="column"><h3>HELPFULL LINKS</h3></div>
+<div class="column"><h3>GET IN TOUCH</h3></div>
+<div class="column"><h3>CONNECT WITH US</h3></div>
+</div></div>
+</section></div><!--
+    <script>
+        console.log("Website Loaded Successfully");
+        const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".sidebar a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+    });
+});
+    </script>-->    
+</body>
+</html>
