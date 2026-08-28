@@ -608,6 +608,304 @@ html{
     }
 
         }
+        /* =================================
+   CONTACT SECTION
+================================= */
+
+#contact {
+    width: 100%;
+    min-height: 100%;
+}
+
+.contact-section {
+    width: 100%;
+    min-height: 700px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 60px 50px 25px;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    border-radius: 30px;
+}
+
+
+/* CONTACT HEADING */
+
+.contact-section > h1 {
+    text-align: center;
+
+    font-size: 70px;
+
+    font-weight: 800;
+
+    color: #111;
+
+    margin-bottom: 20px;
+}
+
+
+/* MAIN CONTENT */
+
+.contact-content {
+    text-align: center;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* NAME */
+
+.contact-content h2 {
+    font-size: 28px;
+
+    color: #222;
+
+    margin-bottom: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* TAGLINE */
+
+.contact-tagline {
+    color: #777;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+
+/* LOCATION */
+
+.contact-location {
+    color: #888;
+
+    font-size: 15px;
+
+    margin-bottom: 45px;
+}
+
+.contact-location i {
+    margin-right: 6px;
+}
+
+
+/* ROUTE */
+
+.route-title {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    color: #555;
+
+    margin-bottom: 25px;
+}
+
+
+/* LINKS */
+
+.contact-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    margin-bottom: 45px;
+}
+
+.contact-links div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.contact-links a {
+    text-decoration: none;
+
+    color: #777;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    color: #b87810;
+
+    transform: translateX(3px);
+}
+
+
+/* SOCIAL MEDIA */
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.social-links a {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    background: #b97812;
+
+    color: white;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+
+    background: #8f5b0b;
+}
+
+
+/* BACK TO TOP */
+
+.back-top {
+    text-decoration: none;
+
+    color: #777;
+
+    border: 1px solid #ddd;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.back-top:hover {
+    background: #fff;
+
+    color: #222;
+
+    transform: translateY(-2px);
+}
+
+
+/* FOOTER */
+
+.contact-footer {
+    width: 100%;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #999;
+
+    font-size: 12px;
+        }
+        @media (max-width: 700px) {
+
+    .contact-section {
+        padding: 45px 20px 20px;
+
+        min-height: 700px;
+    }
+
+    .contact-section > h1 {
+        font-size: 45px;
+    }
+
+    .contact-content h2 {
+        font-size: 22px;
+    }
+
+    .contact-tagline {
+        font-size: 13px;
+
+        max-width: 280px;
+    }
+
+    .contact-location {
+        font-size: 13px;
+
+        margin-bottom: 35px;
+    }
+
+    .contact-links {
+        gap: 45px;
+
+        margin-bottom: 35px;
+    }
+
+    .contact-links a {
+        font-size: 13px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        width: 45px;
+        height: 45px;
+
+        font-size: 16px;
+    }
+
+    .contact-footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+
+        font-size: 10px;
+    }
+
+        }
 </style>
 </head>
 <body><header class="sticky-header">
@@ -950,14 +1248,93 @@ knowledge for the development and growth of the organization.
 
 </section>
 <section id="contact">
-    <div class="content">
-    <div id="contact" class="project-text">
-    <h1>Contact</h1>
-<div class="column"><h3>Prashant Kumar</h3></div>
-<div class="column"><h3>HELPFULL LINKS</h3></div>
-<div class="column"><h3>GET IN TOUCH</h3></div>
-<div class="column"><h3>CONNECT WITH US</h3></div>
-</div></div>
+
+    <div class="contact-section">
+
+        <h1>Contact</h1>
+
+        <div class="contact-content">
+
+            <h2>PRASHANT KUMAR</h2>
+
+            <p class="contact-tagline">
+                Web Developer • App Developer • Data Analyst
+            </p>
+
+            <p class="contact-location">
+                <i class="fas fa-location-dot"></i>
+                India
+            </p>
+
+
+            <h3 class="route-title">ROUTE</h3>
+
+            <div class="contact-links">
+
+                <div>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                </div>
+
+                <div>
+                    <a href="#contact">Contact</a>
+                    <a href="#projects">Portfolio</a>
+                    <a href="#">Resume</a>
+                </div>
+
+            </div>
+
+
+            <!-- SOCIAL MEDIA -->
+
+            <div class="social-links">
+
+                <a href="https://github.com/prashant07022" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/prashant07022/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/prashant.tokthing/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="mailto:prashanttokthing@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+            </div>
+
+
+            <!-- BACK TO TOP -->
+
+            <a href="#home" class="back-top">
+                Back to top ↑
+            </a>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="contact-footer">
+
+            <span>
+                © 2026 Prashant Kumar — All Rights Reserved.
+            </span>
+
+            <span>
+                // end of transmission
+            </span>
+
+        </div>
+
+    </div>
+
 </section></div>
     <script>
 
