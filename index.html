@@ -573,7 +573,144 @@ knowledge for the development and growth of the organization.
 <div class="column"><h3>GET IN TOUCH</h3></div>
 <div class="column"><h3>CONNECT WITH US</h3></div>
 </div></div>
-</section></div><!--
+</section></div>
+    <script>
+
+const slider = document.querySelector(".skills-slider");
+
+let autoScroll;
+let resumeTimer;
+
+function startAutoScroll() {
+
+    clearInterval(autoScroll);
+
+    autoScroll = setInterval(() => {
+
+        slider.scrollLeft += 1;
+
+        /*
+         * When first set finishes,
+         * move back to beginning smoothly.
+         */
+        if (slider.scrollLeft >= slider.scrollWidth / 2) {
+
+            slider.scrollLeft = 0;
+
+        }
+
+    }, 20);
+
+}
+
+function pauseAutoScroll() {
+
+    clearInterval(autoScroll);
+
+    clearTimeout(resumeTimer);
+
+    /*
+     * Start automatic scrolling again
+     * after the user stops interacting.
+     */
+    resumeTimer = setTimeout(() => {
+
+        startAutoScroll();
+
+    }, 2000);
+
+}
+
+
+/* Manual touch/swipe */
+
+slider.addEventListener("touchstart", () => {
+
+    pauseAutoScroll();
+
+}, { passive: true });
+
+
+slider.addEventListener("touchmove", () => {
+
+    pauseAutoScroll();
+
+}, { passive: true });
+
+
+slider.addEventListener("touchend", () => {
+
+    pauseAutoScroll();
+
+});
+
+
+/* Mouse wheel */
+
+slider.addEventListener("wheel", () => {
+
+    pauseAutoScroll();
+
+});
+
+
+/* Mouse drag */
+
+let isDragging = false;
+let startX;
+let startScrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+
+    isDragging = true;
+
+    slider.style.cursor = "grabbing";
+
+    startX = e.pageX;
+
+    startScrollLeft = slider.scrollLeft;
+
+    pauseAutoScroll();
+
+});
+
+slider.addEventListener("mousemove", (e) => {
+
+    if (!isDragging) return;
+
+    e.preventDefault();
+
+    const distance = e.pageX - startX;
+
+    slider.scrollLeft =
+        startScrollLeft - distance;
+
+});
+
+slider.addEventListener("mouseup", () => {
+
+    isDragging = false;
+
+    slider.style.cursor = "grab";
+
+    pauseAutoScroll();
+
+});
+
+slider.addEventListener("mouseleave", () => {
+
+    isDragging = false;
+
+    slider.style.cursor = "grab";
+
+});
+
+
+/* Start automatic scrolling */
+
+startAutoScroll();
+
+    </script><!--
     <script>
         console.log("Website Loaded Successfully");
         const sections = document.querySelectorAll("section");
