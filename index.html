@@ -312,19 +312,59 @@ html{
   top: 0;
   z-index: 1000; /* Keeps the header layered above other content */
 }
-.skills-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    
+.skills-slider {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    cursor: grab;
+
+    scrollbar-width: none;
+
+    padding: 20px 0;
 }
-.skill{
-    margin-left: 10px;
-    margin-right: 10px;
-    background:white;
-    padding:20px;
-    text-align:center;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
+
+.skills-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.skills-track {
+    display: flex;
+    gap: 20px;
+
+    width: max-content;
+}
+
+.skill {
+    flex: 0 0 150px;
+
+    height: 150px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.10);
+
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+}
+
+.skill img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
 }
 </style>
 </head>
@@ -409,43 +449,93 @@ knowledge for the development and growth of the organization.
 <div class="content">
 <div id="skills" class="project-text">
 <h1>Skills</h1>
+<div class="skills-slider">
 
-<div class="skills-container">
+    <div class="skills-track">
 
-<div class="skill">
-    <img src="imageswebsite/claudeskill.jpg" width="100" height="100">
-</div>
-<div class="skill">
-    <img src="imageswebsite/vscodeskill.jpg" width="100" height="100">
-</div>
-<div class="skill">
-    <img src="imageswebsite/cppskill.jpg" width="100" height="100">
-</div>
-<div class="skill">
-    <img src="imageswebsite/cskill.png" width="100" height="100">
-</div>
-<div class="skill">
-    <img src="imageswebsite/cssskill.jpg"width="100" height="100">
-</div>
+        <div class="skill">
+            <img src="imageswebsite/claudeskill.jpg" alt="Claude">
+        </div>
 
-<div class="skill">
-    <img src="imageswebsite/figmaskill.jpg" width="100" height="100">
-</div>
+        <div class="skill">
+            <img src="imageswebsite/vscodeskill.jpg" alt="VS Code">
+        </div>
 
-<div class="skill">
-    <img src="imageswebsite/githubskill.jpg" width="100" height="100">
-</div>
+        <div class="skill">
+            <img src="imageswebsite/cppskill.jpg" alt="C++">
+        </div>
 
-<div class="skill">
-    <img src="imageswebsite/htmlskill.png" width="100" height="100">
-</div>
+        <div class="skill">
+            <img src="imageswebsite/cskill.png" alt="C">
+        </div>
 
-<div class="skill">
-    <img src="imageswebsite/javascriptskill.jpg" width="100" height="100">
-</div>
-<div class="skill">
-    <img src="imageswebsite/mysqlskill.jpg" width="100" height="100">
-</div>
+        <div class="skill">
+            <img src="imageswebsite/cssskill.jpg" alt="CSS">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/figmaskill.jpg" alt="Figma">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/githubskill.jpg" alt="GitHub">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/htmlskill.png" alt="HTML">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/javascriptskill.jpg" alt="JavaScript">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/mysqlskill.jpg" alt="MySQL">
+        </div>
+
+        <!-- Duplicate for continuous scrolling -->
+
+        <div class="skill">
+            <img src="imageswebsite/claudeskill.jpg" alt="Claude">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/vscodeskill.jpg" alt="VS Code">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/cppskill.jpg" alt="C++">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/cskill.png" alt="C">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/cssskill.jpg" alt="CSS">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/figmaskill.jpg" alt="Figma">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/githubskill.jpg" alt="GitHub">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/htmlskill.png" alt="HTML">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/javascriptskill.jpg" alt="JavaScript">
+        </div>
+
+        <div class="skill">
+            <img src="imageswebsite/mysqlskill.jpg" alt="MySQL">
+        </div>
+
+    </div>
 
 </div>
 </div></div>
