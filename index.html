@@ -11,12 +11,13 @@
             margin:0;
             padding:0;
             box-sizing:border-box;
-        }body {
+        }
+body {
     margin: 0;
     min-height: 100vh;
     font-family: Arial, sans-serif;
 
-    background:
+background:
         radial-gradient(
             circle at 10% 15%,
             rgba(220, 180, 100, 0.30),
@@ -37,7 +38,6 @@
             #f8f6ef,
             #f1eee5
         );
-
     color: #222;
 }
 *{
@@ -46,7 +46,7 @@
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
-        .container{
+.container{
     position: relative;
     top: auto;
     left: auto;
@@ -54,21 +54,17 @@
     padding: 0 20px;
     width:90%;
     max-width:1750px;
-
     height:auto;
     min-height:85vh;
-
     background:rgba(255,255,255,0.12);
     border:1px solid rgba(255,255,255,0.2);
     border-radius:40px;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 20px 60px rgba(0,0,0,.35);
-
     overflow:hidden;
-
     margin: 20px auto;
-        }
+}
 body{
     min-height:100vh;
 }
@@ -141,7 +137,6 @@ header{
     gap: 18px;
     z-index: 1000;
 }
-
 .sidebar a{
     width: 60px;
     height: 60px;
@@ -156,7 +151,6 @@ header{
     text-decoration: none;
     transition: .3s;
 }
-
 .sidebar a:hover,
 .sidebar a.active{
     background: #FFD000;
@@ -267,22 +261,19 @@ header{
             padding: 24px;             /* Generous breathing room for text */
             max-width: 400px;          /* Prevents the box from stretching too wide */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Almost invisible soft shadow */
-        }
-
-        /* Text styling inside the box */
-        .minimal-box h2 {
+}
+.minimal-box h2 {
             margin-top: 0;
             color: #1a1a1a;
             font-size: 1.25rem;
             font-weight: 600;
-        }
-
-        .minimal-box p {
+}
+.minimal-box p {
             margin-bottom: 0;
             color: #666666;             /* Muted gray text for a softer look */
             font-size: 0.95rem;
             line-height: 1.5;
-        }
+}
 nav{
     display:flex;
     justify-content:space-between;
@@ -323,595 +314,368 @@ html{
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-
     cursor: grab;
-
     scrollbar-width: none;
-
     padding: 20px 0;
 }
-
 .skills-slider::-webkit-scrollbar {
     display: none;
 }
-
 .skills-track {
     display: flex;
     gap: 20px;
-
     width: max-content;
 }
-
 .skill {
     flex: 0 0 150px;
-
     height: 150px;
-
     background: white;
-
     border-radius: 15px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     box-shadow:
         0 5px 20px rgba(0,0,0,0.10);
-
     transition: transform 0.3s ease;
 }
-
 .skill:hover {
     transform: translateY(-5px);
 }
-
 .skill img {
     width: 100px;
     height: 100px;
-
     object-fit: contain;
-
     border-radius: 10px;
 }
-        /* =========================
+/* =========================
    PROJECTS SECTION
 ========================= */
-
 .projects-container {
     width: 90%;
     max-width: 1000px;
     margin: 50px auto;
 }
-
-
 /* PROJECT CARD */
-
 .project-card {
     position: relative;
-
     display: flex;
     align-items: center;
-
     gap: 30px;
-
     margin-bottom: 50px;
-
     padding: 25px;
-
     background: rgba(255, 255, 255, 0.90);
-
     border: 1px solid rgba(0, 0, 0, 0.08);
-
     border-radius: 25px;
-
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.08);
-
     transition: 0.3s ease;
 }
-
-
 /* HOVER EFFECT */
-
 .project-card:hover {
     transform: translateY(-6px);
-
     box-shadow:
         0 18px 40px rgba(0, 0, 0, 0.14);
 }
-
-
 /* PROJECT NUMBER */
-
 .project-number {
     position: absolute;
-
     left: -25px;
     top: -15px;
-
     width: 50px;
     height: 50px;
-
     border-radius: 50%;
-
     background: #FFD400;
-
     color: #111;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 15px;
     font-weight: 700;
-
     box-shadow:
         0 5px 15px rgba(0, 0, 0, 0.15);
 }
-
-
 /* PROJECT IMAGE */
-
 .project-image {
     width: 40%;
-
     flex-shrink: 0;
 }
-
 .project-image img {
     width: 100%;
     height: 220px;
-
     object-fit: cover;
-
     border-radius: 18px;
-
     display: block;
 }
-
-
 /* PROJECT INFORMATION */
-
 .project-info {
     flex: 1;
 }
-
 .project-category {
     font-size: 12px;
-
     letter-spacing: 2px;
-
     color: #888;
-
     font-weight: 600;
 }
-
 .project-info h2 {
     margin: 10px 0;
-
     font-size: 30px;
-
     color: #222;
 }
-
 .project-info p {
     font-size: 14px;
-
     line-height: 1.7;
-
     color: #666;
-
     margin-bottom: 18px;
 }
-
-
 /* TECHNOLOGY TAGS */
-
 .project-tags {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 8px;
-
     margin-bottom: 20px;
 }
-
 .project-tags span {
     padding: 7px 12px;
-
     background: #f1f1ed;
-
     border-radius: 20px;
-
     font-size: 11px;
-
     color: #555;
 }
-
-
 /* BUTTONS */
-
 .project-buttons {
     display: flex;
-
     gap: 10px;
 }
-
 .project-buttons a {
     text-decoration: none;
-
     padding: 10px 17px;
-
     border-radius: 25px;
-
     background: #f0f0ec;
-
     color: #222;
-
     font-size: 13px;
-
     font-weight: 600;
-
     transition: 0.3s;
 }
-
 .project-buttons a:hover {
     transform: translateY(-2px);
 }
-
 .project-buttons .live-btn {
     background: #FFD400;
-
     color: #111;
         }
 @media (max-width: 700px) {
-
     .projects-container {
         width: 90%;
         margin-top: 40px;
     }
-
     .project-card {
         flex-direction: column;
-
         align-items: stretch;
-
         gap: 20px;
-
         padding: 20px;
-
         margin-bottom: 40px;
     }
-
     .project-number {
         left: -10px;
         top: -15px;
-
         width: 40px;
         height: 40px;
-
         font-size: 12px;
     }
-
     .project-image {
         width: 100%;
     }
-
     .project-image img {
         height: 180px;
     }
-
     .project-info h2 {
         font-size: 24px;
     }
-
     .project-info p {
         font-size: 13px;
     }
-
     .project-buttons {
         flex-wrap: wrap;
     }
-
         }
-        /* =================================
+/* =================================
    CONTACT SECTION
 ================================= */
-
 #contact {
     width: 100%;
     min-height: 100%;
 }
-
 .contact-section {
     width: 100%;
     min-height: 700px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     padding: 60px 50px 25px;
-
     background: rgba(255, 255, 255, 0.25);
-
     border-radius: 30px;
 }
-
-
 /* CONTACT HEADING */
-
 .contact-section > h1 {
     text-align: center;
-
     font-size: 70px;
-
     font-weight: 800;
-
     color: #111;
-
     margin-bottom: 20px;
 }
-
-
 /* MAIN CONTENT */
-
 .contact-content {
     text-align: center;
-
     max-width: 600px;
-
     margin: 0 auto;
-
     flex: 1;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     justify-content: center;
 }
-
-
 /* NAME */
-
 .contact-content h2 {
     font-size: 28px;
-
     color: #222;
-
     margin-bottom: 12px;
-
     letter-spacing: 1px;
 }
-
-
 /* TAGLINE */
-
 .contact-tagline {
     color: #777;
-
     font-size: 16px;
-
     line-height: 1.6;
-
     margin-bottom: 15px;
 }
-
-
 /* LOCATION */
-
 .contact-location {
     color: #888;
-
     font-size: 15px;
-
     margin-bottom: 45px;
 }
-
 .contact-location i {
     margin-right: 6px;
 }
-
-
 /* ROUTE */
-
 .route-title {
     font-size: 14px;
-
     letter-spacing: 2px;
-
     color: #555;
-
     margin-bottom: 25px;
 }
-
-
 /* LINKS */
-
 .contact-links {
     display: flex;
-
     justify-content: center;
-
     gap: 70px;
-
     margin-bottom: 45px;
 }
-
 .contact-links div {
     display: flex;
-
     flex-direction: column;
-
     gap: 16px;
 }
-
 .contact-links a {
     text-decoration: none;
-
     color: #777;
-
     font-size: 15px;
-
     transition: 0.3s;
 }
-
 .contact-links a:hover {
     color: #b87810;
-
-    transform: translateX(3px);
+   transform: translateX(3px);
 }
-
-
 /* SOCIAL MEDIA */
-
 .social-links {
     display: flex;
-
     justify-content: center;
-
     gap: 15px;
-
     margin-bottom: 35px;
 }
-
 .social-links a {
     width: 55px;
     height: 55px;
-
     border-radius: 50%;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     text-decoration: none;
-
     background: #b97812;
-
     color: white;
-
     font-size: 20px;
-
     transition: 0.3s;
 }
-
 .social-links a:hover {
     transform: translateY(-5px);
-
     background: #8f5b0b;
 }
-
-
 /* BACK TO TOP */
-
 .back-top {
     text-decoration: none;
-
     color: #777;
-
     border: 1px solid #ddd;
-
     padding: 12px 25px;
-
     border-radius: 30px;
-
     font-size: 14px;
-
     transition: 0.3s;
 }
-
 .back-top:hover {
     background: #fff;
-
     color: #222;
-
     transform: translateY(-2px);
 }
-
-
 /* FOOTER */
-
 .contact-footer {
     width: 100%;
-
     padding-top: 25px;
-
     border-top: 1px solid rgba(0, 0, 0, 0.08);
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     color: #999;
-
     font-size: 12px;
         }
         @media (max-width: 700px) {
-
     .contact-section {
         padding: 45px 20px 20px;
-
         min-height: 700px;
     }
-
     .contact-section > h1 {
         font-size: 45px;
     }
-
     .contact-content h2 {
         font-size: 22px;
     }
-
     .contact-tagline {
         font-size: 13px;
-
         max-width: 280px;
     }
-
     .contact-location {
         font-size: 13px;
-
         margin-bottom: 35px;
     }
-
     .contact-links {
         gap: 45px;
-
         margin-bottom: 35px;
     }
-
     .contact-links a {
         font-size: 13px;
     }
-
     .social-links {
         gap: 10px;
     }
-
     .social-links a {
         width: 45px;
         height: 45px;
-
         font-size: 16px;
     }
-
     .contact-footer {
         flex-direction: column;
-
         gap: 10px;
-
         text-align: center;
-
         font-size: 10px;
     }
-
         }
 </style>
 </head>
@@ -937,24 +701,7 @@ html{
      <div class="background"></div>
     <div class="overlay"></div>
     <div class="container">
-    
-<!--        <div class="hero-text" id="home">
-
-        <h1>Hii, I'm PRASHANT </h1>
-        <h2>KUMAR</h2>
-        <h3>Web Developer | App Developer | Data Analyst | Data Scientist</h3>
-<p>
-I build responsive websites, modern web applications,
-and data-driven solutions using HTML, CSS, JavaScript,
-React, Python, SQL and Power BI.
-</p>
-        <button ><a href="C:\Users\Puneet\Downloads\autoCV.pdf" >Download Resume</button></a>
-    </div>
-    <div class="hero">
-    <div class="hero-image">
-        <img src="c:\Users\Puneet\Downloads\971dc758-e92e-47a4-80f3-8ddbf4cd8fa2.png" alt="Anime Character">
-    </div></div>
--->
+   
 <section id="home">
     <div class="content">
     <div class="hero-text" id="home">
@@ -997,511 +744,303 @@ knowledge for the development and growth of the organization.
 <div id="skills" class="project-text">
 <h1>Skills</h1>
 <div class="skills-slider">
-
     <div class="skills-track">
-
         <div class="skill">
             <img src="imageswebsite/claudeskill.jpg" alt="Claude">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/vscodeskill.jpg" alt="VS Code">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/cppskill.jpg" alt="C++">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/cskill.png" alt="C">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/cssskill.jpg" alt="CSS">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/figmaskill.jpg" alt="Figma">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/githubskill.jpg" alt="GitHub">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/htmlskill.png" alt="HTML">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/javascriptskill.jpg" alt="JavaScript">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/mysqlskill.jpg" alt="MySQL">
         </div>
-
         <!-- Duplicate for continuous scrolling -->
-
         <div class="skill">
             <img src="imageswebsite/claudeskill.jpg" alt="Claude">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/vscodeskill.jpg" alt="VS Code">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/cppskill.jpg" alt="C++">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/cskill.png" alt="C">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/cssskill.jpg" alt="CSS">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/figmaskill.jpg" alt="Figma">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/githubskill.jpg" alt="GitHub">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/htmlskill.png" alt="HTML">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/javascriptskill.jpg" alt="JavaScript">
         </div>
-
         <div class="skill">
             <img src="imageswebsite/mysqlskill.jpg" alt="MySQL">
-        </div>
-
-    </div>
-
-</div>
+        </div></div></div>
 </div></div>
 </section>
-
 <section id="projects">
-
     <div class="content">
-
         <div class="project-text">
-
             <h1>Projects</h1>
-
             <div class="projects-container">
-
                 <!-- PROJECT 01 -->
                 <div class="project-card">
-
                     <div class="project-number">01</div>
-
                     <div class="project-image">
                         <img src="imageswebsite/project001.jpg"
                              alt="Project 1">
                     </div>
-
                     <div class="project-info">
-
                         <span class="project-category">
                             WEB DEVELOPMENT
                         </span>
-
                         <h2>My First Website</h2>
-
                         <p>
                             A responsive website designed using
                             HTML and CSS with a modern and clean
                             user interface.
                         </p>
-
                         <div class="project-tags">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>Responsive</span>
                         </div>
-
                         <div class="project-buttons">
-
                             <a href="YOUR_GITHUB_LINK"
                                target="_blank">
                                 GitHub ↗
                             </a>
-
                             <a href="YOUR_LIVE_LINK"
                                target="_blank"
                                class="live-btn">
                                 Live Demo ↗
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
-
-
                 <!-- PROJECT 02 -->
                 <div class="project-card">
-
                     <div class="project-number">02</div>
-
                     <div class="project-image">
                         <img src="imageswebsite/project001.jpg"
                              alt="Project 2">
                     </div>
-
                     <div class="project-info">
-
                         <span class="project-category">
                             DATA ANALYTICS
                         </span>
-
                         <h2>Power BI Dashboard</h2>
-
                         <p>
                             An interactive dashboard created to
                             analyze data and display meaningful
                             insights through visualizations.
                         </p>
-
                         <div class="project-tags">
                             <span>Power BI</span>
                             <span>Excel</span>
                             <span>Data Analysis</span>
                         </div>
-
                         <div class="project-buttons">
-
                             <a href="YOUR_GITHUB_LINK"
                                target="_blank">
                                 GitHub ↗
                             </a>
-
                             <a href="YOUR_LIVE_LINK"
                                target="_blank"
                                class="live-btn">
                                 View Project ↗
                             </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
+                        </div></div></div>
                 <!-- PROJECT 03 -->
                 <div class="project-card">
-
                     <div class="project-number">03</div>
-
                     <div class="project-image">
                         <img src="imageswebsite/project001.jpg"
                              alt="Project 3">
                     </div>
-
                     <div class="project-info">
-
                         <span class="project-category">
                             WEB APPLICATION
                         </span>
-
                         <h2>Shopping Website</h2>
-
                         <p>
                             A modern shopping website interface
                             with product cards, navigation and
                             responsive design.
                         </p>
-
                         <div class="project-tags">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
-
                         <div class="project-buttons">
-
                             <a href="YOUR_GITHUB_LINK"
                                target="_blank">
                                 GitHub ↗
                             </a>
-
                             <a href="YOUR_LIVE_LINK"
                                target="_blank"
                                class="live-btn">
                                 Live Demo ↗
                             </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+                        </div></div></div></div></div></div>
 </section>
 <section id="contact">
-
     <div class="contact-section">
-
         <h1>Contact</h1>
-
         <div class="contact-content">
-
             <h2>PRASHANT KUMAR</h2>
-
             <p class="contact-tagline">
                 Web Developer • App Developer • Data Analyst
             </p>
-
             <p class="contact-location">
                 <i class="fas fa-location-dot"></i>
                 India
             </p>
-
-
             <h3 class="route-title">ROUTE</h3>
-
             <div class="contact-links">
-
                 <div>
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                 </div>
-
                 <div>
                     <a href="#contact">Contact</a>
                     <a href="#projects">Portfolio</a>
                     <a href="#">Resume</a>
                 </div>
-
             </div>
-
-
             <!-- SOCIAL MEDIA -->
-
             <div class="social-links">
-
                 <a href="https://github.com/prashant07022" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
-
                 <a href="https://www.linkedin.com/in/prashant07022/" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-
                 <a href="https://www.instagram.com/prashant.tokthing/" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
-
                 <a href="mailto:prashanttokthing@gmail.com">
                     <i class="fas fa-envelope"></i>
                 </a>
-
             </div>
-
-
             <!-- BACK TO TOP -->
-
             <a href="#home" class="back-top">
                 Back to top ↑
             </a>
-
         </div>
-
-
         <!-- FOOTER -->
-
         <div class="contact-footer">
-
             <span>
                 © 2026 Prashant Kumar — All Rights Reserved.
             </span>
-
             <span>
                 // end of transmission
             </span>
-
-        </div>
-
-    </div>
-
+        </div></div>
 </section></div>
     <script>
-
 const slider = document.querySelector(".skills-slider");
-
 let autoScroll;
 let resumeTimer;
-
 function startAutoScroll() {
-
     clearInterval(autoScroll);
-
     autoScroll = setInterval(() => {
-
         slider.scrollLeft += 1;
-
         /*
          * When first set finishes,
          * move back to beginning smoothly.
          */
         if (slider.scrollLeft >= slider.scrollWidth / 2) {
-
             slider.scrollLeft = 0;
-
         }
-
     }, 20);
-
 }
-
 function pauseAutoScroll() {
-
     clearInterval(autoScroll);
-
     clearTimeout(resumeTimer);
-
     /*
      * Start automatic scrolling again
      * after the user stops interacting.
      */
     resumeTimer = setTimeout(() => {
-
         startAutoScroll();
-
     }, 2000);
-
 }
-
-
 /* Manual touch/swipe */
-
 slider.addEventListener("touchstart", () => {
-
     pauseAutoScroll();
-
 }, { passive: true });
-
-
 slider.addEventListener("touchmove", () => {
-
     pauseAutoScroll();
-
 }, { passive: true });
-
-
 slider.addEventListener("touchend", () => {
-
     pauseAutoScroll();
-
 });
-
-
 /* Mouse wheel */
-
 slider.addEventListener("wheel", () => {
-
     pauseAutoScroll();
-
 });
-
-
 /* Mouse drag */
-
 let isDragging = false;
 let startX;
 let startScrollLeft;
-
 slider.addEventListener("mousedown", (e) => {
-
     isDragging = true;
-
     slider.style.cursor = "grabbing";
-
     startX = e.pageX;
-
     startScrollLeft = slider.scrollLeft;
-
     pauseAutoScroll();
-
 });
-
 slider.addEventListener("mousemove", (e) => {
-
     if (!isDragging) return;
-
     e.preventDefault();
-
     const distance = e.pageX - startX;
-
     slider.scrollLeft =
         startScrollLeft - distance;
-
 });
-
 slider.addEventListener("mouseup", () => {
-
     isDragging = false;
-
     slider.style.cursor = "grab";
-
     pauseAutoScroll();
-
 });
-
 slider.addEventListener("mouseleave", () => {
-
     isDragging = false;
-
     slider.style.cursor = "grab";
-
 });
-
-
 /* Start automatic scrolling */
-
 startAutoScroll();
-
-    </script><!--
-    <script>
-        console.log("Website Loaded Successfully");
-        const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".sidebar a");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if(link.getAttribute("href") === "#" + current){
-            link.classList.add("active");
-        }
-    });
-});
-    </script>-->    
-</body>
+    </script></body>
 </html>
